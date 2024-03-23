@@ -1,21 +1,27 @@
-# diccionario con información personal ficticia
+# Diccionario
 informacion_personal = {
-    "Nombre": " Braian Stiven Calle Rodriguez",
-    "Edad": 27,
-    "Ciudad": "Shushufindi-Sucumbios",
-    "Profesion": "Pastelero - Artesanal "
+'nombre':'Braian Stiven Calle Rodriguez',
+'edad':27,
+'ciudad':'Armenia',
+'Departamento':'Quindio',
 }
+print(informacion_personal)
 
-# Verificar si la clave "telefono" existe en el diccionario
-if "telefono" not in informacion_personal:
-    # Si no existe, agregarla con un número de teléfono ficticio
-    informacion_personal["Telefono"] = "0982966403"
+# Modificar el valor
+informacion_personal['ciudad'] = 'Armenia Quindio Colombia'
+print(informacion_personal)
 
-# Eliminar la clave "edad" del diccionario
-if "edad" in informacion_personal:
-    del informacion_personal["edad"]
+# Agregar nueva clave:valor
+informacion_personal['profesion'] = 'Estudiante Universitario'
+print(informacion_personal)
 
-# Imprimir el diccionario final
-print("Información personal:")
-for key in informacion_personal:
-    print(f"{key}: {informacion_personal[key]}")
+# Verificar telefono y agregar
+if 'telefono' in informacion_personal:
+ print(informacion_personal['telefono'])
+else:
+ informacion_personal['telefono'] = '0982966403'
+print(informacion_personal)
+
+# Eliminar edad
+informacion_personal.pop('edad')
+print(informacion_personal)
